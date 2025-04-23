@@ -1,0 +1,17 @@
+{
+    "$jsonSchema": {
+        "bsonType": "object",
+        "properties": {
+            "_id": { "bsonType": "objectId" },
+            "name": { "bsonType": "string" },
+            "description": { "bsonType": "string" },
+            "parent_category_id": { "bsonType": "objectId" },
+            "path": {
+                "bsonType": "array",
+                "items": { "bsonType": "string" }
+            }
+        },
+        "required": ["name", "path"],
+        "additionalProperties": false
+    }
+}

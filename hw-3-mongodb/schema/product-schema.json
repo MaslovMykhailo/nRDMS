@@ -1,0 +1,33 @@
+{
+    "$jsonSchema": {
+        "bsonType": "object",
+        "properties": {
+            "_id": { "bsonType": "objectId" },
+            "name": { "bsonType": "string" },
+            "description": { "bsonType": "string" },
+            "manufacturer": { "bsonType": "string" },
+            "category_id": { "bsonType": "objectId" },
+            "price": { "bsonType": "double" },
+            "stock": { "bsonType": "int" },
+            "attributes": {
+                "bsonType": "array",
+                "items": {
+                    "bsonType": "object",
+                    "required": ["name", "value"],
+                    "properties": {
+                        "name": { "bsonType": "string" },
+                        "value": {
+                            "oneOf": [
+                                { "bsonType": "string" },
+                                { "bsonType": "double" },
+                                { "bsonType": "int" },
+                                { "bsonType": "bool" }
+                            ]
+                        }
+                    },
+                    "additionalProperties": false
+                }
+            }
+        }
+    }
+}
