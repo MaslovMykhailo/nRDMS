@@ -452,7 +452,7 @@ db.products.updateOne(
 )
 
 db.products.find(
-  { _id: smartphoneId }s
+  { _id: smartphoneId }
 )
 ```
 
